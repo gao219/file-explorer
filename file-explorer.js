@@ -24,7 +24,7 @@ const debounce_emit = _.debounce(function (event, file) {
 }, 500);
 
 roots.forEach(rootDir => {
-  fs.watch(rootDir, 'utf8', (event, file) => {
+  fs.watch(rootDir, {encoding: 'utf8', recursive: true}, (event, file) => {
     console.log('There was a ' + event + ' at ' + file);
     debounce_emit(event, file);
   })

@@ -9,7 +9,6 @@ function App() {
   const [files, setFiles] = useState([]);
 
   const fetchData = useCallback(async () => {
-    console.log('1111');
     const response = await fetch('/files');
     
     if (!response.ok) {
