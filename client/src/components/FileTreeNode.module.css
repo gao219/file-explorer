@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.container.selected {
+  background: #37373d;
+}
+
+.container > i {
+  margin-right: 10px;
+}
